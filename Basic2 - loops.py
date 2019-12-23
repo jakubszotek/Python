@@ -31,6 +31,15 @@ for item in a:
 b = [item*5 for item in a]
 print(b)
 
+# break and continue
+for i in range(0,10):
+    if i==3: break
+    print(i)
+ 
+for i in range(0,10):
+    if i % 3 == 0: continue
+    print(i)
+
 
 # Task 1
 # Find the highest and the lowest value of the below function in a specified range of integers
@@ -42,3 +51,18 @@ def max_and_min(start = 1, end = 11):
     max_value = 
     min value =
     return max_value, min_value
+
+
+# Task 2
+# write a function that will sum the number from 1 to n except those that divide by a specified parameter.
+# example: sum_except(10,3) should return 1+2+4+5+7+8+10 which is 37
+def sum_except(n, divisor):
+    value = 0
+    for i in range():
+       
+    return value
+ 
+#check
+print(sum_except(n=4, divisor=2))
+print(sum_except(n=10, divisor=1))
+print(sum_except(n=15, divisor=5))
