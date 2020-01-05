@@ -2,6 +2,8 @@ a = [1,2,3,4,5]  # list
 print(type(a))
 b = (1,2,3,4,5) # tuple
 print(type(b))
+c = {1,2,3,4,5} # set
+print(c)
  
 print('a = ' + str(a))
 for i in range(5):
@@ -11,11 +13,18 @@ print('b = ' + str(b))
 for i in range(5):
     print('i={},value={}'.format(i,b[i]))
    
+print('c = ' + str(c))
+for i in c:
+    print('i={}'.format(i))
+   
 # So what is the difference? Try to alter a single value
 a[2] = 30
 print(a)
+print(b[2])
 b[2] = 30
-# the values in a tuple are not subject to change
+print(c[2])
+# the values in a tuple and in a set are not subject to change using indexing
+# sets don't even support indexing
 #------------------
  
 # Dictionary
@@ -34,7 +43,12 @@ list(eng_spa.keys())
 #printing values
 eng_spa.values()
 list(eng_spa.values())
- 
+
+# If you are not sure if a key exists in your dictionary. If it doesn’t it will return None instead of an error
+var1 = eng_spa.get('two') 
+print(var1)
+var2 = eng_spa.get('seven') 
+print(var2)
 
 # Loop for all keys and values
 for k,v in eng_spa.items():
